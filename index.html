@@ -308,16 +308,18 @@
         </div>
 
         <!-- IMAGEM HERO E CAIXA DE TEXTO (Desktop mantido, selo escondido no mobile) -->
-        <div class="flex-1 w-full relative overflow-hidden bg-nautico-black border-t-3 border-nautico-red">
+        <div class="flex-1 w-full relative overflow-hidden bg-nautico-black border-t-3 border-nautico-red flex flex-col md:block">
+            
             <img 
                 src="foto1.gif" 
                 alt="Prato do Náutico" 
-                class="w-full h-full object-cover filter contrast-125 sepia-[0.1] opacity-90"
+                class="w-full flex-1 md:flex-none md:h-full object-cover filter contrast-125 sepia-[0.1] opacity-90"
                 onerror="this.src='https://images.unsplash.com/photo-1555944186-21876ab3b544?q=80&w=2604&auto=format&fit=crop'; this.onerror=null;"
             />
 
-            <div data-aos="fade-right" data-aos-delay="200" class="absolute bottom-12 md:bottom-24 left-0 md:left-12 bg-nautico-black text-nautico-cream p-6 md:p-8 w-[85%] md:w-[45%] max-w-xl shadow-2xl z-10">
-                <p class="text-base md:text-xl leading-relaxed font-light opacity-90" style="font-family: 'Montserrat', sans-serif;">
+            <!-- Na versão mobile: empilha embaixo da imagem. Na versão desktop: flutua sobre a imagem. -->
+            <div data-aos="fade-right" data-aos-delay="200" class="relative md:absolute md:bottom-24 md:left-12 bg-nautico-black text-nautico-cream p-8 md:p-8 w-full md:w-[45%] max-w-xl md:shadow-2xl z-10 flex-none">
+                <p class="text-[15px] md:text-xl leading-relaxed font-light opacity-90 text-center md:text-left" style="font-family: 'Montserrat', sans-serif;">
                     Um lugar que parece sofisticado sem esforço, sem nunca se tornar formal, com pratos litorâneos sazonais, uma clientela animada e aquela energia cearense calorosa que mantém a noite viva.
                 </p>
             </div>
@@ -399,7 +401,7 @@
                         class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" 
                         onerror="this.src='https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=1200&auto=format&fit=crop'; this.onerror=null;"
                     />
-                    <div class="absolute -bottom-4 -right-4 text-nautico-blue font-bold text-4xl font-serif bg-nautico-cream px-2 border-2 border-nautico-black">SUCESSO!</div>
+                    <div class="absolute -bottom-4 -right-4 text-nautico-blue font-bold text-4xl font-serif bg-nautico-cream px-2 border-2 border-nautico-black">EM ALTA!</div>
                 </div>
                 
                 <h5 class="text-xl md:text-3xl font-bold text-nautico-black uppercase tracking-widest mb-4 mt-2" style="font-family: 'Cormorant Garamond', serif;">Peixe Frito</h5>
